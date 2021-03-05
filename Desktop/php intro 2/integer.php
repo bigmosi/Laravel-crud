@@ -7,9 +7,5 @@ $authors = array(
     "Mark Twain",
     
 );
-array_push($authors, "Louise May Alcott");
-
-$authors[] = "L.M.Montgomery";
-
+unset($authors[2],$authors[0]);
 print_r($authors);
-
