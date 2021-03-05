@@ -10,4 +10,4 @@ class person {
 
 $myObject = new person();
 
-echo $myObject::AVG_LIFE_SPAN;
+echo person::AVG_LIFE_SPAN;
