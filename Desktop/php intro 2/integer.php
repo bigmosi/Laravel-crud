@@ -9,5 +9,7 @@ $authors = array(
 );
 array_push($authors, "Louise May Alcott");
 
+$authors[] = "L.M.Montgomery";
+
 print_r($authors);
 
