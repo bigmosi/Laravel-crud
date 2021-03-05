@@ -1,7 +1,10 @@
 <?php
-$sampleString = 'A penny saved is penny earn';
+$currency = "penny";
+$sampleString = "A $currency saved is $currency earn\n";
 
 //echo $sampleString;
 
-$misc = 'st patrick\'s Day';
-echo $misc;
+$var = 2;
+
+echo "{$var}nd place\n";
+
