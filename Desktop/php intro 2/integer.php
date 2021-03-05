@@ -1,8 +1,13 @@
 <?php
 
 $authors = array(
-    "quarkly" => "Charles Dickens",
-    10=>"Jane Austin",
-    "peotic"=>"William Shakespear",
-    );
+    "Charles Dickens",
+    "Jane Austin", 
+    "William Shakespear",
+    "Mark Twain",
+    
+);
+array_push($authors, "Louise May Alcott");
+
 print_r($authors);
+
