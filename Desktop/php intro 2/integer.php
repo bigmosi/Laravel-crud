@@ -1,6 +1,13 @@
 <?php
 
-$quote = "There is no great genius without a mixture of madness.";
+$authors = array("Charles Dickens","Jane Austin","William Shakespear","Mark Twain","Louse May Alcott");
 
+$books = ["Little Woman","Jane Eyre", "Richard III","Oliver Twist"];
 
-echo strpos($quote, "without");
+$allTypes = [10,1.3,"howdy",true];
+
+print_r($allTypes);
+
+print_r($books);
+
+print_r($authors);
