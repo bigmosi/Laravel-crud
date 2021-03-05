@@ -7,5 +7,12 @@ $authors = array(
     "Mark Twain",
     
 );
-unset($authors[2],$authors[0]);
-print_r($authors);
+$authorsAssociative = array(
+
+    "poetic" => "William Shakespeare",
+    "brillian" => "Jane Austin",
+    "quarky" => "Charles Dickens" 
+);
+sort($authorsAssociative);
+
+print_r($authorsAssociative);
