@@ -1,18 +1,11 @@
 <?php
 
 $authors = array(
-    "Charles Dickens",
-    "Jane Austin", 
-    "William Shakespear",
-    "Mark Twain",
-    
+    "quarkly" => "Charles Dickens",
+    "brilliant" => "Jane Austin", 
+    "poetic" => "William Shakespear"   
 );
-$authorsAssociative = array(
+foreach($authors as $key =>$Name){
 
-    "poetic" => "William Shakespeare",
-    "brillian" => "Jane Austin",
-    "quarky" => "Charles Dickens" 
-);
-sort($authorsAssociative);
-
-print_r($authorsAssociative);
+    echo $Name."(".$key.")\n";
+}
