@@ -2,16 +2,16 @@
 class person {
     const AVG_LIFE_SPAN = 79;
     
-    public $firstName;
-    public $lastName;
-    public $yearBorn;
+    protected $firstName;
+    protected $lastName;
+    protected $yearBorn;
 
-    function__construct($tempFirst = "",$tempLast = "",$tempYear = "")
+    function __construct($tempFirst = "",$tempLast = "",$tempYear = "")
     {
         echo "person Constructor".PHP_EOL;
-        $this->$tempName;
-        $this->$tempLast;
-        $this->$tempYear;
+        $this->firstName = $tempName;
+        $this->secondName = $tempLast;
+        $this->yearBorn = $tempYear;
     }
 
     public function getFirstName(){
@@ -20,13 +20,14 @@ class person {
 
     }
 
-    public function setFirstName($tempName){
+    public function setFirstName($tempName)
+    {
 
        $this->firstName = $tempName;
     }
-    public function getFullName()
+    protected function getFullName()
     {
-        echo "simon";
+
      echo "person->getFullName()".PHP_EOL;
      return $this->firstName." ".$this->lastName.PHP_EOL;
 
@@ -34,7 +35,22 @@ class person {
 
 
 }
+class author extends person {
+    public static $centurypopular = "19th";
+    public $penName = "Mark Twain";
 
-$myObject = new person();
-$myObject->setFirstName("Sam");
-echo $myObject->getFirstName;
+    public function getPenName(){
+        return $this->penName.PHP.EOL;
+    }
+    public function getCompleteName()
+    {
+        return $this->firstName."".$this->lastName."a.k.a".$this->penName.PHP_EOL;
+    }
+    public static function getCenturyAuthorityWasPopular()
+    {
+
+    }
+} 
+
+
+echo Author::$centurypopular;
