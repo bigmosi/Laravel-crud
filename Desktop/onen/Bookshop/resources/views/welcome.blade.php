@@ -2,6 +2,7 @@
 
 @section('content')
 
-    <h1>Some contents</h1>
-    <p>{{ 2 == 3 ? "Hello" : "Does not equal"}}</p>
+    <h1>Washing Bay</h1>
+    <p>{{"Hello"}}</p>
     @endsection
+
