@@ -14,7 +14,7 @@
 
 </head>
 <body >
-@include('partials.header')
+@include('partials.admin-header')
 <div class="container">
     @yield('content')
 </div>
