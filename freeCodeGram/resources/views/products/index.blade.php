@@ -11,7 +11,9 @@
 </head>
 <body>
 <h1>Products</h1>
-<p>{{$title}}</p>
+@foreach($data as $item)
+<p>{{$item}}</p>
+    @endforeach
 </body>
 </html>
 
