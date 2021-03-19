@@ -18,6 +18,7 @@ Route::get('/products', [productsController::class, 'index']);
 Route::get('/products/{name}', [productsController::class, 'show']);
 
 Route::get('/products/{id}', [productsController::class, 'show'])->where('id', '[0-9]');
+Route::get('/products/{name}', [productsController::class, 'show'])->where('name', '[a-zA-Z]+');
 
 
 
