@@ -14,10 +14,10 @@ use App\Http\Controllers\productsController;
 |
 */
 
-//Route::get('/products', [productsController::class, 'index']);
+Route::get('/products', [productsController::class, 'index']);
+Route::get('/products/{id}', [productsController::class, 'show']);
 
-Route::get('/products', 'App\Http\Controllers\productsController@index');
-Route::get('/products/about',[productsController::class, 'about']);
+
 
 
 
