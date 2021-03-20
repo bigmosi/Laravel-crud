@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\productsController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,8 @@ use App\Http\Controllers\productsController;
 |
 */
 
-Route::get('/products',
-    [productsController::class, 'index'])->name('products');
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/about',[PagesController::class, 'about']);
 
 
 
