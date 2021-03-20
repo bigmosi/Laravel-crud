@@ -71,7 +71,6 @@
             <h2>
                 Who we are
             </h2>
-
             <h3 class="orange-txt">
                 Meet Our Team
             </h3>

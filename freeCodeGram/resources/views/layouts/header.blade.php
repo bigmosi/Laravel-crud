@@ -8,7 +8,6 @@
             />
         </a>
     </div>
-
     <ul>
         <li>
             <a href="">About</a>
@@ -20,3 +19,4 @@
             <a href="">Contact</a>
         </li>
     </ul>
+</nav>
