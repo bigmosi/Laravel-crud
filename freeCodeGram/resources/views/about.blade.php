@@ -1,18 +1,12 @@
-@if(5>10)
-    <p>5 is lower than 5</p>
-    @elseif(5==10)
-       <p>5 is indeed lower than 10</p>
-    @else
-   <h1>All condition are wrong!</h1>
-    @endif
-@unless(empty($name))
+@switch($name)
+    @case('Dary')
+    <h2>Name is Dary!</h2>
+      @break
+    @case('David')
+    <h2>Name is David!</h2>
+      @break
+    @case('Micheal')
+    <h2>Name is Micheal</h2>
+    @default
 
-    <h2>Name isn't empty</h2>
-    @endunless
-@empty(!$name)
-    <h2>Name is empty!</h2>
-@endempty
-
-@isset($name)
-    <h2>Name has been set</h2>
-    @endisset
+@endswitch
