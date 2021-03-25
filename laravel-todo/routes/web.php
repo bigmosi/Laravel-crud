@@ -1,8 +1,9 @@
 <?php
 
+use App\Models\Task;
 use Illuminate\Support\Facades\Route;
-use App\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,9 @@ Route::group(['middleware' =>  'web'], function() {
     Route::get('/', function () {
         $tasks = Task::orderBy('created_at', 'asc')->get();
 
-        return view ('tasks', ['tasks' => $tasks]);
+        return view('tasks', ['tasks' => $tasks]);
     });
+
     // Add New Task
     Route::post('/task', function(Request $request)
     {
@@ -47,5 +49,7 @@ Route::group(['middleware' =>  'web'], function() {
        return redirect ('/');
     });
 
-});
+    });
+
+
 

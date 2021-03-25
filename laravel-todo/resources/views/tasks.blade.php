@@ -5,7 +5,7 @@
 
     <div class="panel-body">
 {{--        Display Validation Errors--}}
-        @include('common.errors')
+    @include('common.errors')
 {{--        New Task Form--}}
         <form action="{{url('task')}}" method="POST" class="form-horizontal">
             {!! csrf_field() !!}
@@ -40,7 +40,28 @@
                     <th>Task</th>
                     <th>Delete</th>
                     </thead>
+{{--                    Table Body--}}
+                    <tbody>
+                    @foreach($tasks as $task)
+                        <tr>
+{{--                            Task Name--}}
+                            <td class="table-text">
+                                <div>{{$task->name}}</div>
+                            </td>
+{{--                            Delete Button--}}
+                            <td>
+                                <form action="{{url('task/'.$task->id)}}" method="POST">
+                                    {!! csrf_field() !!}
+                                    {!! method_field('DELETE') !!}
+
+                                    <button>Delete Task</button>
+                                </form>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>
-    @section
+    @endif
+@endsection
