@@ -18,9 +18,25 @@
             </div>
 {{--            Add Task Button--}}
        <div class="form-group">
-
+            <div class="col-sm-offset-3 col-sm-6">
+                <Button type="submit" class="btn btn-default">
+                    <i class="fa fa-plus"></i>Add Task
+                </Button>
+            </div>
        </div>
 
         </form>
     </div>
+{{--    Current Task--}}
+    @if(count($tasks)>0)
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Current Tasks
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped task-table">
+
+                </table>
+            </div>
+        </div>
     @section
