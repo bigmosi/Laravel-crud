@@ -20,6 +20,32 @@ Route::group(['middleware' =>  'web'], function() {
 
         return view ('tasks', ['tasks' => $tasks]);
     });
+    // Add New Task
+    Route::post('/task', function(Request $request)
+    {
+     $validator =
+     validator::make($request->all(), [
+         'name' =>
+         'required|max:255',
+     ]);
+
+     if ($validator->fails()){
+         return redirect('/')
+             ->withInput()
+             ->withErriors($validator);
+     }
+     $task = new Task;
+     $task->name = $request->name;
+     $task->save();
+        return redirect('/');
+    }
+    );
+    //Delete Task
+    Route::delete('/task/{task}', function(Task $task)
+    {
+       $task-> delete();
+       return redirect ('/');
+    });
 
 });
 
