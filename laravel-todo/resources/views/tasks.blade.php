@@ -35,7 +35,11 @@
             </div>
             <div class="panel-body">
                 <table class="table table-striped task-table">
-
+{{--                    Table heading--}}
+                    <thead>
+                    <th>Task</th>
+                    <th>Delete</th>
+                    </thead>
                 </table>
             </div>
         </div>
