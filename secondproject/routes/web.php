@@ -14,15 +14,30 @@ use Illuminate\Http\Request;
 |
 */
 //Display All Task
-Route::get('/MyApp', function () {
-    return view('MyApp');
+
+
+Route::get('/', function () {
 });
 //Add New Task
 
 Route::post('/MyApp', function(Request $request){
+    $validator = validator::make($request->all(), [
+        'name' => 'required|max:255',
+    ]);
+    if($validator->fails()){
+        return redirct('/')
+            ->withInput()
+            ->withErrors($validator);
+
+    }
+    $task = new Task;
+    $task->name = $request->name;
+    return redirect('/');
+
 
 });
 //Deleting An Existing Task
 Route::delete('/MyApp/{id}', function($id){
 
 });
+
