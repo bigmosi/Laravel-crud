@@ -29,6 +29,7 @@ class ReservationController extends Controller
     public function create($hotel_id)
     {
         $hotelInfo = Hotel::with('rooms')->get()->find($hotel_id);
+        return view('dashboard.reservationCreate', compact('hotelInfo'));
     }
 
     /**
@@ -39,7 +40,8 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->request->add(['user_id' => 1]);
+        Reservation::create($request->all());
     }
 
     /**
