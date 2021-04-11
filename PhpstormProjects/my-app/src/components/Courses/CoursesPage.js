@@ -11,6 +11,7 @@ class CoursesPage extends React.Component {
     }
     handleChange(event) {
         const course = {...this.state.course,title:event.target.value};
+        this.setState({course});
     }
     render() {
         return (
@@ -19,7 +20,7 @@ class CoursesPage extends React.Component {
                 <h3>Add Courses</h3>
                 <input
                     type="text"
-                    onChange={this.handleChange}
+                    onChange={this.handleChange.bind(this)}
                     value={this.state.course.title}
                 />
                 <input type="submit" value="Save"/>
