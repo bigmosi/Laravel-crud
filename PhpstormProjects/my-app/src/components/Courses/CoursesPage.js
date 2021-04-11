@@ -6,14 +6,17 @@ class CoursesPage extends React.Component {
                  title: ""
              }
          };
-    }
-    handleChange =(event)=> {
+
+    handleChange =event=> {
         const course = {...this.state.course,title:event.target.value};
         this.setState({course});
-    }
+    };
+handleSubmit() {
+    alert(this.state.course.title);
+}
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <h2>Courses</h2>
                 <h3>Add Courses</h3>
                 <input
@@ -23,7 +26,7 @@ class CoursesPage extends React.Component {
                 />
                 <input type="submit" value="Save"/>
             </form>
-        )
+        );
     }
 }
 
