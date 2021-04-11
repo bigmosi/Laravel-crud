@@ -1,4 +1,7 @@
 import React from 'react';
+import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+import mapDispatchToProps from "react-redux/lib/connect/mapDispatchToProps";
+import {connect} from 'react-redux';
 
 class CoursesPage extends React.Component {
          state = {
@@ -30,5 +33,10 @@ handleSubmit= event => {
         );
     }
 }
+function mapStateToProps(state,ownProps){
+    return {
+        courses:state.courses
+    }
+}
 
-export default CoursesPage;
+export default connect(mapStateToProps,mapDispatchToProps) (CoursesPage);
