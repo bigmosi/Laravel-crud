@@ -11,7 +11,8 @@ class CoursesPage extends React.Component {
         const course = {...this.state.course,title:event.target.value};
         this.setState({course});
     };
-handleSubmit() {
+handleSubmit= event => {
+    event.preventDefault();
     alert(this.state.course.title);
 }
     render() {
